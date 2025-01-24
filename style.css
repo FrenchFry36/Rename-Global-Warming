@@ -9,6 +9,16 @@
   --light-grey: #555;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
 /* SECTION 1 */
 
 #section-1 {
@@ -20,6 +30,36 @@
     --white
   ); /* Makes text more readable if it overlaps the background */
   padding: 20px; /* Optional: Adds spacing inside the section */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gw-h1 {
+  font-size: 3.9rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rename-h1 {
+  font-size: 9rem;
+  padding-bottom: 0;
+}
+
+form {
+  width: 465px;
+  display: flex;
+}
+
+#input-field {
+  width: 80%;
+}
+
+#sub-button {
+  width: 20%;
 }
 
 /* SECTION 2 */
