@@ -15,8 +15,39 @@ h3 {
   font-family: "Oswald", sans-serif;
 }
 
-p {
+p,
+a,
+button {
   font-family: "Lato", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  width: 100vw;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: right;
+}
+
+nav {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 /* SECTION 1 */
