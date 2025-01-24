@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #f9f9f9;
+  --light-grey: #555;
+}
+
 /* SECTION 1 */
 
 #section-1 {
@@ -11,7 +16,9 @@
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
-  color: white; /* Makes text more readable if it overlaps the background */
+  color: var(
+    --white
+  ); /* Makes text more readable if it overlaps the background */
   padding: 20px; /* Optional: Adds spacing inside the section */
 }
 
@@ -81,7 +88,7 @@
 /* FOOTER */
 
 footer {
-  background-color: #f9f9f9;
+  background-color: var(--white);
   padding: 20px;
   text-align: center;
 }
@@ -101,5 +108,5 @@ footer {
 .description {
   margin-top: 20px;
   font-size: 14px;
-  color: #555;
+  color: var(--light-grey);
 }
