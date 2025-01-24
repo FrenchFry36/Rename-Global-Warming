@@ -8,12 +8,54 @@
   </head>
   <body>
     <header></header>
-    <section id="section-1"></section>
+    <section id="section-1">
+      <!--Section where user can input his option -->
+
+      <h1>RENAME GLOBAL WARMING</h1>
+      <form action="/submit" method="POST">
+        <label for="inputField"></label>
+        <input
+          type="text"
+          id="input-field"
+          name="inputField"
+          placeholder="Enter your option"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
     <section id="section-2"></section>
+    <!--Section where user can read about the purpose of the project -->
     <section id="section-3"></section>
+    <!--Section where user can real cases of global warming events -->
     <section id="section-4"></section>
-    <section id="section-5"></section>
-    <footer></footer>
+    <!--Section where user can add his own story describing GW event -->
+    <section id="section-5">
+      <!--Section where user can see the name option of the day -->
+      <h3>NAME OF THE DAY</h3>
+      <div id="name-of-the-day"></div>
+      <button id="return-to-section1">Ready to rename it?</button
+      ><!--Button returns user to section1 where he can enter his option -->
+    </section>
+    <footer>
+      <div id="credentials">
+        <div id="profile1">
+          <img src="photo1.jpg" alt="Photo 1" />
+          <p>Saidumar Akbarov</p>
+        </div>
+        <div id="profile2">
+          <img src="photo2.jpg" alt="Photo 2" />
+          <p>Ly-Ly Janusz</p>
+        </div>
+        <div id="profile3">
+          <img src="photo3.jpg" alt="Photo 3" />
+          <p>Kostiantyn Kovalchuk</p>
+        </div>
+      </div>
+      <p id="team description">
+        This project is created within Migracode Web Development course.
+      </p>
+      <p>&copy; 2025 All rights reserved. Barcelona, Spain.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
