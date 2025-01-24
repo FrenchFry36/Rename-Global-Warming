@@ -85,6 +85,21 @@
   text-align: center;
 }
 
+/* SECTION 4 */
+
+#section-4 {
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-story {
+  width: 30%;
+  height: 30%;
+}
+
 /* FOOTER */
 
 footer {
