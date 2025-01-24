@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    />
     <title>Rename Global Warming</title>
   </head>
   <body>
-
     <header>
-      <navbar>
+      <nav>
         <ul>
           <li><a href="#footer">About</a></li>
           <li><a href="#">Log in</a></li>
         </ul>
-      </navbar>
+      </nav>
     </header>
 
     <section id="section-1">
       <!--Section where user can input his option -->
-      <h1>RENAME GLOBAL WARMING</h1>
+      <h1 class="rename-h1">RENAME</h1>
+      <h1 class="gw-h1">GLOBAL WARMING</h1>
       <form action="/submit" method="POST">
         <label for="inputField"></label>
         <input
@@ -28,7 +36,7 @@
           name="inputField"
           placeholder="Enter your option"
         />
-        <button type="submit">Submit</button>
+        <button id="sub-button" type="submit">Submit</button>
       </form>
     </section>
 
@@ -72,7 +80,6 @@
       <button id="return-to-section1">Ready to rename it?</button>
       <!--Button returns user to section1 where he can enter his option -->
     </section>
-
 
     <footer id="footer">
       <div id="credentials">
