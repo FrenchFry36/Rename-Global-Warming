@@ -161,18 +161,19 @@ form {
 /* Section 2 */
 #section-2 {
   padding: 3rem 2rem;
-  text-align: center;
+  text-align: left;
   background-color: var(--white);
   font-size: 1.2rem;
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 #section-2 h2 {
-  margin-bottom: 4rem; /* Increased space between headline and text */
+  margin-bottom: 5rem; /* Increased space between headline and text */
 }
 
 /* Section 3 */
@@ -315,9 +316,12 @@ footer h2 {
   margin-bottom: 3rem; /* Keep additional spacing as per your design */
 }
 
+footer .profile {
+  color: var(--white);
+}
+
 #credentials,
 .description,
-.profile,
 .copyright {
   color: var(--white); /* Reaffirm white color for nested elements */
 }
@@ -351,7 +355,7 @@ footer h2 {
 }
 
 .copyright {
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-weight: lighter;
   font-size: 0.7rem;
 }
