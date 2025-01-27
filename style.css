@@ -87,16 +87,9 @@ h2 {
   position: relative;
 }
 
-/* Wrapping container to apply perspective */
-.heading-container {
-  perspective: 1600px; /* Set perspective for 3D effect */
-}
-
-/* 3D Effect - Apply perspective to the element and transform */
-
 .rename-h1 {
   font-size: 12rem;
-
+  margin-bottom: 0.5rem;
   font-weight: 700;
   background: linear-gradient(
     to right,
@@ -113,6 +106,7 @@ h2 {
   font-weight: 400;
   color: #f9f9f9;
   transform: rotateX(5deg); /* Slight warp effect */
+  margin-top: -1rem;
 }
 
 /* Form Layout */
@@ -167,7 +161,7 @@ form {
 }
 
 .content-wrapper {
-  max-width: 70%;
+  max-width: 65%;
   margin: 0 auto;
   font-size: 1.5rem;
 }
@@ -188,7 +182,7 @@ form {
 }
 
 #carousel-container {
-  width: 75%; /* Or a fixed width like 800px */
+  width: 70%; /* Or a fixed width like 800px */
   height: 400px; /* Adjust this based on your design */
   margin: 0 auto; /* Center the carousel */
   overflow: hidden; /* Hide overflowing content */
@@ -237,7 +231,7 @@ form {
 #story-description {
   margin-top: 2rem;
   text-align: left;
-  width: 75%;
+  width: 70%;
   margin: 2rem auto;
 }
 
@@ -248,8 +242,10 @@ form {
 
 /* Section 4 */
 #section-4 {
-  padding: 1rem 2rem;
   background-color: var(--white);
+  text-align: center;
+  padding: 2rem 2rem; /* Reduce padding to bring it closer */
+  margin-top: -2rem; /* Negative margin to overlap slightly with Section 3 */
   text-align: center;
 }
 
@@ -275,6 +271,33 @@ form {
   padding: 4rem 2rem;
   background-color: var(--white);
   text-align: center;
+}
+
+/* Background for Section 5 */
+#section-5 {
+  position: relative;
+  background-image: url("dana_photos/dana3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white); /* Ensure text is visible over the background */
+}
+
+#section-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  opacity: 0.8; /* Adjust opacity for the overlay */
+  z-index: 0; /* Place the overlay behind content */
+}
+
+#section-5 .content-wrapper {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
 }
 
 #name-of-the-day {
