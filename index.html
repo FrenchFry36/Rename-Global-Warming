@@ -4,82 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <<<<<<< Updated upstream =======
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
     />
-    >>>>>>> Stashed changes
     <title>Rename Global Warming</title>
   </head>
   <body>
     <header>
-      <navbar>
+      <nav class="navbar">
         <ul>
           <li><a href="#footer">About</a></li>
           <li><a href="#">Log in</a></li>
         </ul>
-      </navbar>
+      </nav>
     </header>
 
     <section id="section-1">
-      <!--Section where user can input his option -->
-      <h1>RENAME GLOBAL WARMING</h1>
+      <div class="heading-container">
+        <h1 class="rename-h1">RENAME</h1>
+        <h2 class="gw-h1">"global warming"</h2>
+      </div>
       <form action="/submit" method="POST">
-        <label for="inputField"></label>
         <input
           type="text"
           id="input-field"
           name="inputField"
           placeholder="Enter your option"
         />
-        <button type="submit">Submit</button>
+        <button id="sub-button" type="submit">Submit</button>
       </form>
-
-      <div class="triangle-container">
-        <h1 class="rename-h1">RENAME</h1>
-        <h2 class="gw-h1">"global warming"</h2>
-        <form action="/submit" method="POST">
-          <input
-            type="text"
-            id="input-field"
-            name="inputField"
-            placeholder="Enter your option"
-          />
-          <button id="sub-button" type="submit">Submit</button>
-        </form>
-      </div>
-      >>>>>>> Stashed changes
     </section>
 
     <section id="section-2">
       <div class="content-wrapper">
         <h2>WHY DO I EVEN CARE?</h2>
         <p>
-          We are starting to normalize global warming. It's becoming
-          commonplace. But things are getting worse. Behind these neutral words
-          are tragedies and horrifying disasters. We caused. It's time to fix it
-          before it's too late. Let's start with giving it a proper name that
-          reflects its nature.
+          We are starting to normalize global warming. And while it's becoming a
+          commonplace, things are getting worse. Behind these neutral words are
+          tragedies and horrifying disasters, that we have caused. It's time to
+          fix it. Let's start with giving this phenomenon a name that it truly
+          deserves.
         </p>
       </div>
     </section>
 
     <section id="section-3">
       <div id="story-header">
-        <h2>REAL LIFE STORIES</h2>
+        <h2>REAL STORIES</h2>
       </div>
       <div id="carousel-container">
         <button class="carousel-button" id="carousel-left">&lt;</button>
         <div id="carousel-images">
-          <!-- Image carousel content -->
+          <img src="dana_photos/dana1.jpg" alt="Dana Story 1" />
+          <img src="dana_photos/dana2.jpg" alt="Dana Story 2" />
+          <img src="dana_photos/dana3.jpg" alt="Dana Story 3" />
         </div>
+
         <button class="carousel-button" id="carousel-right">&gt;</button>
       </div>
       <div id="story-description">
         <p>
-          Behind each story are real people and their lives. Click through to
-          see their experiences.
+          DANA (Depresión Aislada en Niveles Altos) that struck Valencia and
+          other regions of Spain in October 2024 led to a tragic death toll of
+          92 lives.
+        </p>
+        <p>
+          This makes it one of the deadliest incidents of its kind in recent
+          history. The catastrophic flooding overwhelmed local infrastructure,
+          with many people trapped in their homes, vehicles, or public spaces.
+        </p>
+        <p>
+          Rescue operations faced significant challenges due to the rapid rise
+          of floodwaters and extreme weather conditions. This event underscores
+          the human cost of extreme climate events, emphasizing the critical
+          need for improved warning systems and community preparedness to
+          prevent such significant loss of life in the future.
         </p>
       </div>
     </section>
@@ -103,15 +103,15 @@
 
       <div id="credentials">
         <div class="profile">
-          <img src="photo1.jpg" alt="Photo 1" />
-          <p>Saidumar Akbarov</p>
-        </div>
-        <div class="profile">
-          <img src="photo2.jpg" alt="Photo 2" />
+          <img src="team_photos/photo1.jpg" alt="Photo 1" />
           <p>Ly-Ly Janusz</p>
         </div>
         <div class="profile">
-          <img src="photo3.jpg" alt="Photo 3" />
+          <img src="team_photos/photo2.jpg" alt="Photo 2" />
+          <p>Saidumar Akbarov</p>
+        </div>
+        <div class="profile">
+          <img src="team_photos/photo3.jpg" alt="Photo 3" />
           <p>Kostiantyn Kovalchuk</p>
         </div>
       </div>
