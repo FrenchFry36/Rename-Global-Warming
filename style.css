@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--light-grey);
 }
 
 :root {
@@ -14,6 +15,16 @@
 
 body {
   font-family: "Lato", sans-serif;
+}
+
+/* Global H2 Styling */
+h2 {
+  font-size: 2.5rem; /* Base font size for H2 */
+  font-weight: 700; /* Bold */
+  color: var(--black); /* Default color */
+  line-height: 1.4; /* Adjust for readability */
+  text-align: center; /* Default alignment */
+  margin: 2rem 0; /* Add vertical spacing */
 }
 
 /* Navbar */
@@ -39,7 +50,7 @@ body {
   text-decoration: none;
   color: var(--white);
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: lighter;
   transition: color 0.3s;
 }
 
@@ -94,8 +105,7 @@ h2 {
   ); /* Gradient yellow to orange */
   -webkit-text-stroke: 2px #000;
   -webkit-background-clip: text; /* Clip background to text */
-  -webkit-text-fill-color: transparent; /* Fill text with background */
-  transform: rotateX(10deg); /* Apply 3D rotation */
+  -webkit-text-fill-color: transparent; /* Fill text with background */ /* Apply 3D rotation */
 }
 
 .gw-h1 {
@@ -177,19 +187,22 @@ form {
 }
 
 #carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* This will allow positioning of buttons relative to the container */
-  width: 80%;
-  margin: 0 auto;
+  width: 75%; /* Or a fixed width like 800px */
+  height: 400px; /* Adjust this based on your design */
+  margin: 0 auto; /* Center the carousel */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
 }
 
 #carousel-images {
-  display: flex;
-  overflow: hidden;
-  width: 100%; /* Make carousel images take up full container width */
-  justify-content: center;
+  display: flex; /* Align images in a row */
+  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+#carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-button {
@@ -223,7 +236,7 @@ form {
 #story-description {
   margin-top: 2rem;
   text-align: left;
-  width: 80%;
+  width: 75%;
   margin: 2rem auto;
 }
 
@@ -234,7 +247,7 @@ form {
 
 /* Section 4 */
 #section-4 {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background-color: var(--white);
   text-align: center;
 }
@@ -281,6 +294,7 @@ form {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 #return-to-section1:hover {
@@ -301,10 +315,12 @@ footer {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
+  color: var(--white);
 }
 
 .profile {
   text-align: center;
+  color: var(--white);
 }
 
 .profile img {
@@ -316,11 +332,15 @@ footer {
 
 .description {
   font-size: 0.875rem;
-  color: var(--light-grey);
+  color: var(--white);
   margin-bottom: 1rem;
 }
 
 /* Developer Team Section: More space between headline and content */
 #footer h2 {
-  margin-bottom: 2rem; /* Added space */
+  margin-bottom: 3rem; /* Added space */
+}
+
+.copyright {
+  margin-top: 2rem;
 }
