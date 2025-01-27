@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   padding: 0;
   margin: 0;
@@ -7,10 +8,23 @@
 :root {
   --white: #f9f9f9;
   --light-grey: #555;
+  --black: #000;
+  --yellow: #ffd700;
+  --accent: rgba(255, 223, 0, 0.6);
 }
 
-/* SECTION 1 */
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  color: var(--black);
+  background-color: var(--white);
+}
 
+nav a:hover {
+  color: var(--yellow);
+}
+
+/* Section 1 */
 #section-1 {
   background-image: url("https://images.unsplash.com/photo-1653525749885-46a75af1eb5d?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover; /* Ensures the image covers the entire section */
@@ -22,106 +36,138 @@
   padding: 20px; /* Optional: Adds spacing inside the section */
 }
 
-/* SECTION 2 */
-
+/* Section 2 */
 #section-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
+  padding: 4rem 2rem;
   text-align: center;
+  background-color: var(--white);
 }
 
-/* SECTION 3 */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section 3 */
+#story-header {
+  text-align: center; /* Centers the text */
+  margin-bottom: 1rem;
+}
 
 #section-3 {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20vh auto 20vh;
-  grid-template-areas:
-    ". . h h h h h h h h . ."
-    "l l i i i i i i i i r r"
-    ". . d d d d d d d d . .";
+  padding: 4rem 2rem;
+  background-color: var(--white);
 }
 
-#story-header {
-  grid-area: h;
+#carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
-#story-carousel-left {
-  grid-area: l;
+.carousel-button {
+  background-color: var(--yellow);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-#img-carousel-container {
-  grid-area: i;
-  display: flex;
-  justify-content: space-between;
-}
-
-#img-carousel-left {
-  width: 25%;
-}
-
-#img-carousel-right {
-  width: 25%;
-}
-
-#story-carousel-right {
-  grid-area: r;
+.carousel-button:hover {
+  background-color: var(--black);
+  color: var(--yellow);
 }
 
 #story-description {
-  grid-area: d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 2rem;
   text-align: center;
 }
 
-/* SECTION 4 */
-
+/* Section 4 */
 #section-4 {
-  height: 30vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  text-align: center;
 }
 
 #add-story {
-  width: 30%;
-  height: 30%;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* FOOTER */
+#add-story:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
 
-footer {
+/* Section 5 */
+#section-5 {
+  padding: 4rem 2rem;
   background-color: var(--white);
-  padding: 20px;
   text-align: center;
 }
-.credentials {
+
+#name-of-the-day {
+  margin: 1.5rem 0;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#return-to-section1 {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#return-to-section1:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+/* Footer */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+}
+
+#credentials {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
-.credentials .profile {
+
+.profile {
   text-align: center;
 }
-.credentials img {
-  width: 50px;
-  height: 50px;
+
+.profile img {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  margin-bottom: 0.5rem;
 }
+
 .description {
-  margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--light-grey);
 }

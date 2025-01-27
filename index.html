@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <<<<<<< Updated upstream =======
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    />
+    >>>>>>> Stashed changes
     <title>Rename Global Warming</title>
   </head>
   <body>
-
     <header>
       <navbar>
         <ul>
@@ -30,66 +35,87 @@
         />
         <button type="submit">Submit</button>
       </form>
+
+      <div class="triangle-container">
+        <h1 class="rename-h1">RENAME</h1>
+        <h2 class="gw-h1">"global warming"</h2>
+        <form action="/submit" method="POST">
+          <input
+            type="text"
+            id="input-field"
+            name="inputField"
+            placeholder="Enter your option"
+          />
+          <button id="sub-button" type="submit">Submit</button>
+        </form>
+      </div>
+      >>>>>>> Stashed changes
     </section>
 
     <section id="section-2">
-      <!--Section where user can read about the purpose of the project -->
-      <h2>WHY DO I EVEN CARE?</h2>
-      <p>
-        We are starting to normalise global warming. Its becoming a common
-        place. But things are getting worse. Behind these semantically neutral
-        (or even positive) words are tragedies and horrifying disasters. We
-        caused. Its time to fix it before its too late. Lets start with giving
-        it a proper name that reflects its nature.
-      </p>
+      <div class="content-wrapper">
+        <h2>WHY DO I EVEN CARE?</h2>
+        <p>
+          We are starting to normalize global warming. It's becoming
+          commonplace. But things are getting worse. Behind these neutral words
+          are tragedies and horrifying disasters. We caused. It's time to fix it
+          before it's too late. Let's start with giving it a proper name that
+          reflects its nature.
+        </p>
+      </div>
     </section>
 
     <section id="section-3">
-      <!--Section where user can real cases of global warming events -->
       <div id="story-header">
-        <h3>REAL STORY</h3>
+        <h2>REAL LIFE STORIES</h2>
       </div>
-      <button id="story-carousel-left"><</button>
-      <div id="img-carousel-container">
-        <button id="img-carousel-left"><</button>
-        <button id="img-carousel-right">></button>
+      <div id="carousel-container">
+        <button class="carousel-button" id="carousel-left">&lt;</button>
+        <div id="carousel-images">
+          <!-- Image carousel content -->
+        </div>
+        <button class="carousel-button" id="carousel-right">&gt;</button>
       </div>
-      <button id="story-carousel-right">></button>
       <div id="story-description">
-        blablablabla blablav blabla blablabla blablabla blabla blabla vbla
+        <p>
+          Behind each story are real people and their lives. Click through to
+          see their experiences.
+        </p>
       </div>
     </section>
 
     <section id="section-4">
-      <!--Section where user can add his own story describing GW event -->
-      <button id="add-story">Add my story</button>
+      <div class="content-wrapper">
+        <button id="add-story">Share My Story</button>
+      </div>
     </section>
 
     <section id="section-5">
-      <!--Section where user can see the name option of the day -->
-      <h3>NAME OF THE DAY</h3>
-      <div id="name-of-the-day"></div>
-      <button id="return-to-section1">Ready to rename it?</button>
-      <!--Button returns user to section1 where he can enter his option -->
+      <div class="content-wrapper">
+        <h2>NAME OF THE DAY</h2>
+        <div id="name-of-the-day">Climate Kill</div>
+        <button id="return-to-section1">Ready to Rename It?</button>
+      </div>
     </section>
 
-
     <footer id="footer">
+      <h2>DEVELOPER TEAM</h2>
+
       <div id="credentials">
-        <div id="profile1">
+        <div class="profile">
           <img src="photo1.jpg" alt="Photo 1" />
           <p>Saidumar Akbarov</p>
         </div>
-        <div id="profile2">
+        <div class="profile">
           <img src="photo2.jpg" alt="Photo 2" />
           <p>Ly-Ly Janusz</p>
         </div>
-        <div id="profile3">
+        <div class="profile">
           <img src="photo3.jpg" alt="Photo 3" />
           <p>Kostiantyn Kovalchuk</p>
         </div>
       </div>
-      <p id="team description">
+      <p class="description">
         This project is created within Migracode Web Development course.
       </p>
       <p>&copy; 2025 All rights reserved. Barcelona, Spain.</p>
