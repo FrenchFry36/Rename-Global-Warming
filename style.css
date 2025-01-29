@@ -154,7 +154,7 @@ form {
 
 /* Section 2 */
 #section-2 {
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   text-align: left;
   background-color: var(--white);
   font-size: 1.2rem;
@@ -183,7 +183,7 @@ form {
 
 #carousel-container {
   width: 100%; /* Ensure the container spans full width */
-  max-width: 950px; /* Adjust max width as needed */
+  max-width: 1000px; /* Adjust max width as needed */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -215,6 +215,7 @@ form {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  margin: 0.7rem;
 }
 
 #carousel-left {
@@ -234,7 +235,7 @@ form {
   margin-top: 2rem;
   text-align: left;
   width: 70%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 #story-description p {
@@ -261,6 +262,7 @@ form {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 4rem;
 }
 
 #add-story:hover {
