@@ -1,31 +1,41 @@
-/*Names submission*/
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyBeRhuh32_tLeZWh06XPg2GR5fEPAVygW4",
+  authDomain: "global-warming-c9548.firebaseapp.com",
+  projectId: "global-warming-c9548",
+  storageBucket: "global-warming-c9548.appspot.com",
+  messagingSenderId: "1073613221901",
+  appId: "1:1073613221901:web:341b6a202065fedd316544",
+  measurementId: "G-HPZTTC2H5L",
+};
 
-   const firebaseConfig = {
-    apiKey: "AIzaSyBeRhuh32_tLeZWh06XPg2GR5fEPAVygW4",
-    authDomain: "global-warming-c9548.firebaseapp.com",
-    projectId: "global-warming-c9548",
-    storageBucket: "global-warming-c9548.appspot.com",
-    messagingSenderId: "1073613221901",
-    appId: "1:1073613221901:web:341b6a202065fedd316544",
-    measurementId: "G-HPZTTC2H5L"
-  };
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+const form = document.querySelector("form");
+const inputField = document.getElementById("input-field");
+const nameDisplay = document.getElementById("name-of-the-day");
 
-  const form = document.querySelector("form");
-  const inputField = document.getElementById("input-field");
-  const nameDisplay = document.getElementById("name-of-the-day");
+// Scroll to Section 1 when "Ready to Rename?" button is clicked
+document.getElementById("return-to-section1").addEventListener("click", () => {
+  document.getElementById("section-1").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+});
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const newName = inputField.value.trim();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const newName = inputField.value.trim();
 
-    if (newName) {
+  if (newName) {
     await addDoc(collection(db, "globalWarmingNames"), { name: newName });
     nameDisplay.textContent = newName;
     inputField.value = ""; // Clear input field
@@ -33,22 +43,21 @@
     // Scroll to Section 5 after submitting the name
     document.getElementById("section-5").scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
   }
 });
 
-  // Load latest name on page load
-  async function loadLatestName() {
-    const querySnapshot = await getDocs(collection(db, "globalWarmingNames"));
-    const names = querySnapshot.docs.map(doc => doc.data().name);
-    if (names.length > 0) {
-      nameDisplay.textContent = names[names.length - 1]; // Show last submitted name
-    }
+// Load latest name on page load
+async function loadLatestName() {
+  const querySnapshot = await getDocs(collection(db, "globalWarmingNames"));
+  const names = querySnapshot.docs.map((doc) => doc.data().name);
+  if (names.length > 0) {
+    nameDisplay.textContent = names[names.length - 1]; // Show last submitted name
   }
+}
 
-  loadLatestName();
-</script>
+loadLatestName();
 
 /*Carousel scrolling*/
 
@@ -79,6 +88,6 @@ function updateCarousel() {
 document.getElementById("return-to-section1").addEventListener("click", () => {
   document.getElementById("section-1").scrollIntoView({
     behavior: "smooth",
-    block: "start"
+    block: "start",
   });
 });
